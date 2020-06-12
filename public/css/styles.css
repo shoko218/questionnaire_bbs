@@ -1,0 +1,76 @@
+
+h1{
+  font-size: 28px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+.navbar-toggler {
+  border-color: #18A2B7;
+  background-color: #fff;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(24,162,183)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.submit-btn{
+  width: 150px;
+}
+
+.card{
+  text-decoration: none;
+  color: #000;
+  margin: 15px 0;
+}
+
+.panel:hover{
+  text-decoration: none;
+  color: #999;
+}
+
+.pagination{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content:
+  space-between;padding: 0 15px;
+}
+
+.target_title{
+  font-size: 28px;
+  text-align: center;
+}
+.target_content{
+  text-align: center;
+}
+
+.submitForm:hover{
+  text-decoration: none;
+  color: #000;
+}
+
+.list-group-flush{
+  padding: 0;
+}
+
+.contents{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.alert{
+  width: 100%;
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#myPieChart{
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
