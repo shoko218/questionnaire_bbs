@@ -14,7 +14,7 @@ class pagesController extends Controller
 {
   public function index(Request $request){
     $user=Auth::user();
-    $questionnaires=Q_sentence::orderBy('id','desc')->simplePaginate(20);
+    $questionnaires=Q_sentence::orderBy('id','desc')->simplePaginate(10);
     $param=['user'=>$user,'questionnaires'=>$questionnaires];
     return view('pages.index',$param);
   }
@@ -27,7 +27,7 @@ class pagesController extends Controller
 
   public function mypage(Request $request){
     $user=Auth::user();
-    $questionnaires=Q_sentence::where('user_id',$user->id)->orderBy('id','desc')->simplePaginate(20);
+    $questionnaires=Q_sentence::where('user_id',$user->id)->orderBy('id','desc')->simplePaginate(10);
     $param=['user'=>$user,'questionnaires'=>$questionnaires];
     return view('pages.mypage',$param);
   }
