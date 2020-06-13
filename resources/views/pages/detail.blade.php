@@ -70,13 +70,17 @@
     @endif
 
     @if($isYour)
-    <div class="text-center">
-      <form action="/delete" method="POST">
-        @csrf
-        <input type="hidden" value="{{ $targetQ->id }}" name="id">
-        <button type="submit" class="btn" style="background-color:#ff0000; margin-top:20px; color:white; width:100%; max-width:200px">この質問を削除する</button>
-      </form>
-    </div>
+      <div class="text-center">
+        <form action="/delete" method="POST">
+          @csrf
+          <input type="hidden" value="{{ $targetQ->id }}" name="id">
+          <button type="submit" class="btn" style="background-color:#ff0000; margin-top:20px; color:white; width:100%; max-width:200px">この質問を削除する</button>
+        </form>
+      </div>
+    @else
+      <div class="text-center">
+        <button type="submit" class="btn text-center" style="background-color:rgb(24,162,183); margin-top:20px; color:white; width:100%; max-width:200px" onclick="location.href='/'">トップに戻る</button>
+      </div>
     @endif
   </section>
 @endsection
