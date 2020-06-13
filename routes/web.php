@@ -24,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/welcome','pagesController@welcome');
     Route::get('/register_complete','pagesController@welcome');
 });
+
 Auth::routes();
 
 
