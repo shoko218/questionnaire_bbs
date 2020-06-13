@@ -12,15 +12,17 @@
 */
 
 Route::get('/','pagesController@index');
-Route::get('/logout','pagesController@logout');
 Route::get('/home', 'pagesController@index');
 Route::post('/delete','pagesController@delete');
+Route::get('/detail','pagesController@detail');
+Route::get('/logout','pagesController@logout');
 Route::middleware(['auth'])->group(function () {
     Route::get('/mypage','pagesController@mypage');
     Route::get('/makeQ','pagesController@makeQ');
     Route::post('/sendQ','pagesController@sendQ');
-    Route::get('/detail','pagesController@detail');
     Route::post('/submit','pagesController@submit');
+    Route::get('/welcome','pagesController@welcome');
+    Route::get('/register_complete','pagesController@welcome');
 });
 Auth::routes();
 

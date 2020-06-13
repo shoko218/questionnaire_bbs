@@ -65,10 +65,15 @@ class pagesController extends Controller
     $user=Auth::user();
     $id=$request->input('id');
     $targetQ=Q_sentence::find($id);
-    $isYour=($targetQ->user_id==$user->id);
+    if(Auth::check()){
+      $user_id=$user->id;
+    }else{
+      $user_id=-1;
+    }
+    $isYour=($targetQ->user_id==$user_id);
     $param=['targetQ'=>$targetQ,'user'=>$user,'isYour'=>$isYour];
-    if(A_log::didAnswer($targetQ->id,$user->id)){
-      $didAnswer=A_log::didAnswer($targetQ->id,$user->id)->answer_sentence_id;
+    if(A_log::didAnswer($targetQ->id,$user_id)){
+      $didAnswer=A_log::didAnswer($targetQ->id,$user_id)->answer_sentence_id;
       $A_sentence=A_sentence::find($didAnswer)->sentence;
       $param['A_sentence']=$A_sentence;
     }
@@ -90,5 +95,15 @@ class pagesController extends Controller
     $delete = Q_sentence::find($request->id);
     $delete->delete();
     return redirect('/')->with('msg', '削除しました。');
+  }
+
+  public function welcome()
+  {
+    return redirect('/')->with('msg', 'ログインしました。');
+  }
+
+  public function register_complete()
+  {
+    return redirect('/')->with('msg', '登録が完了しました。');
   }
 }

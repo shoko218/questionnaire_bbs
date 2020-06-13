@@ -58,7 +58,7 @@ h2{
 
 .contents{
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -73,4 +73,9 @@ h2{
   max-width: 500px;
   margin-right: auto;
   margin-left: auto;
+}
+
+#top_title{
+  margin-bottom: 24px;
+  text-align: center;
 }

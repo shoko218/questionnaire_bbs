@@ -23,6 +23,7 @@
     @endif
   </section>
   <section class="contents">
+    @if (Auth::check())
     @if($isYour)
       @component('components.detailmsg')
         @slot('title')
@@ -51,6 +52,23 @@
         @include('components.submitform')
       @endisset
     @endisset
+    @else
+        @component('components.detailmsg')
+          @slot('title')
+          会員登録すると<br>質問や回答ができるようになります。
+          @endslot
+          @slot('msg')
+          <div class="text-center">
+            <a href="/register"  class="btn" style="background-color:rgb(24,162,183); margin-top:20px; color:white; width:35%; margin-right:15px;">新規登録</a>
+            <a href="/login"  class="btn" style="background-color:white; margin-top:20px; color:rgb(24,162,183); width:35%; border:1px solid rgb(24,162,183);">ログイン</a>
+          </div>
+          @endslot
+          @slot('list')
+            @each('components.detailmsg_li', $targetQ->answer_sentences, 'choice')
+          @endslot
+        @endcomponent
+    @endif
+
     @if($isYour)
     <div class="text-center">
       <form action="/delete" method="POST">
