@@ -77,10 +77,10 @@
           <button type="submit" class="btn" style="background-color:#ff0000; margin-top:20px; color:white; width:100%; max-width:200px">この質問を削除する</button>
         </form>
       </div>
-    @else
+      @endif
       <div class="text-center">
-        <button type="submit" class="btn text-center" style="background-color:rgb(24,162,183); margin-top:20px; color:white; width:100%; max-width:200px" onclick="location.href='/'">トップに戻る</button>
+        <button type="submit" class="btn text-center" style="background-color:white; margin-top:20px; color:rgb(24,162,183); width:100%; max-width:200px; border: 1px solid rgb(24,162,183);" onclick="location.href='/'">トップに戻る</button>
       </div>
-    @endif
+
   </section>
 @endsection
