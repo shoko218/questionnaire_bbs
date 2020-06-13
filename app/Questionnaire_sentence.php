@@ -10,7 +10,7 @@ class Questionnaire_sentence extends Model
   public static $rules=array(
     'user_id'=>'required|numeric',
     'title'=>'required|between:5,30',
-    'content'=>'max:140',
+    'content'=>'between:10,140',
     'sentence.0'=>'required|max:20',
     'sentence.1'=>'required|max:20',
     'sentence.*'=>'max:20',
