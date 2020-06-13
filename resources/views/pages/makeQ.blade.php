@@ -9,10 +9,6 @@
   @endif
 </section>
 <section>
-  @if ($errors->any())
-    <div class="alert alert-danger">{{$errors}}</div>
-     <!-- /.alert -->
-  @endif
   <form action="/sendQ" method="post" class="contents">
     {{csrf_field()}}
     <input type="hidden" value="{{$user->id}}" name="user_id">
