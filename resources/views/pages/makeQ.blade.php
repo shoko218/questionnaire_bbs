@@ -4,9 +4,6 @@
 
 @section('contents')
 <section>
-  @if (Session::has('msg'))
-    @include('components.msg')
-  @endif
   @if ($errors->any())
     @include('components.errmsg')
   @endif
