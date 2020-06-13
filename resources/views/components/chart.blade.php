@@ -91,7 +91,8 @@ Chart.plugins.register({
               return percentage + '%';
             }
           },
-        }
+        },
+        maintainAspectRatio: false
       }
     });
 </script>
