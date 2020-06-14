@@ -6,6 +6,9 @@ SNSの構造上、フォロワーは自分と似通った人ばかりになり�
 このQAQAQでは完全匿名ですので、より公平にアンケートを行えることが期待できます。<br>
 また、情報操作を懸念し、会員登録制としています。<br>
 
+## 使用した技術
+Laravel6,MySQL,Chart.js
+
 ## 機能
 ### トップページ
 <img width="700" alt="トップページ" src="https://user-images.githubusercontent.com/52749338/84601108-f40e1300-aeb8-11ea-8b06-2cddabd74d6f.png">
