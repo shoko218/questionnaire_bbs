@@ -19,7 +19,7 @@ Chart.plugins.register({
               // Draw the text in black, with the specified font
               ctx.fillStyle = '#000';
 
-              var fontSize = 12;
+              var fontSize = 14;
               var fontStyle = 'normal';
               var fontFamily = 'Helvetica Neue';
               ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
