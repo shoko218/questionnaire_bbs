@@ -74,25 +74,26 @@ Chart.plugins.register({
         legend: {
           display: false,
         },
-        tooltips:{
-          callbacks: {
-            label: function(tooltipItem, data) {
-              //get the concerned dataset
-              var dataset = data.datasets[tooltipItem.datasetIndex];
-              //calculate the total of this data set
-              var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                return previousValue + currentValue;
-              });
-              //get the current items value
-              var currentValue = dataset.data[tooltipItem.index];
-              //calculate the percentage based on the total and current item, also this does a rough rounding to give a whole number
-              var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+        // tooltips:{
+        //   callbacks: {
+        //     label: function(tooltipItem, data) {
+        //       //get the concerned dataset
+        //       var dataset = data.datasets[tooltipItem.datasetIndex];
+        //       //calculate the total of this data set
+        //       var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+        //         return previousValue + currentValue;
+        //       });
+        //       //get the current items value
+        //       var currentValue = dataset.data[tooltipItem.index];
+        //       //calculate the percentage based on the total and current item, also this does a rough rounding to give a whole number
+        //       var percentage = Math.floor(((currentValue/total) * 100)+0.5);
 
-              return percentage + '%';
-            }
-          },
-        },
-        maintainAspectRatio: false
+        //       return percentage + '%';
+        //     }
+        //   },
+        // },
+        animation:false,
+        maintainAspectRatio: false,
       }
     });
 </script>
