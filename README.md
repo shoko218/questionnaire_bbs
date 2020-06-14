@@ -1,78 +1,33 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# アンケート掲示板「[QAQAQ](https://questionnaire.uh-oh.jp/)」
+## 概要
+アンケート掲示板「QAQAQ」は匿名でアンケートが行えるwebサービスです。<br>
+SNSにもこのようなアンケート機能はありますが、RTやいいねのような拡散アクションがなかった場合、そのアンケートツイートを見る人は基本的にはその人のフォロワーのみになってしまいます。<br>
+SNSの構造上、フォロワーは自分と似通った人ばかりになりがちであるため、エンゲージメント数によってはアンケートの結果に支障が出かねません。<br>
+このQAQAQでは完全匿名ですので、より公平にアンケートを行えることが期待できます。<br>
+また、情報操作を懸念し、会員登録制としています。<br>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## 機能
+### トップページ
+<img width="700" alt="トップページ" src="https://user-images.githubusercontent.com/52749338/84601108-f40e1300-aeb8-11ea-8b06-2cddabd74d6f.png">
+トップページにはこのように投稿されたアンケート全てが新着順に並んでいます。<br>
 
-## About Laravel
+### アンケート詳細ページ
+<img width="700" alt="アンケート詳細(投票前)" src="https://user-images.githubusercontent.com/52749338/84601328-400d8780-aeba-11ea-9743-fdc6d2e68da7.png">
+アンケートのカードをクリックするとアンケートの詳細画面に遷移します。<br>現在の投票結果を表す円グラフと、その下に投票フォームを表示しています。<br>円グラフにマウスをホバーすると、ホバーした部分位該当する選択肢と何票入っているかが確認できます。<br>アンケートの詳細画面を閲覧している人がアンケートの作成者だった場合、投票フォームの部分には「あなたが作成した質問です。」と表示され、投票はできなくなっています。また、こちらの画面からアンケートを削除することができます。<br>ログインしていない場合でもアンケートの詳細画面を閲覧することはできますが、投票フォームの部分には会員登録、ログインを促すメッセージが表示されます。<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<img width="700" alt="アンケート詳細(投票済)" src="https://user-images.githubusercontent.com/52749338/84601504-88797500-aebb-11ea-8fa3-e8ad6bb245bd.png">
+アンケートに投票した後は、アンケートに既に回答した旨を示す文と、自分がどれに回答したかが表示されます。<br>投票フォームが非表示になると、まだ一票も入っていない選択肢は円グラフに入らず、全ての選択肢を確認できなくなってしまうので、選択肢一覧を表示しています。<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### アンケート作成ページ
+<img width="700" alt="アンケート作成ページ01" src="https://user-images.githubusercontent.com/52749338/84601765-9203dc80-aebd-11ea-9fd5-e6f1365afad5.png">
+<img width="700" alt="アンケート作成ページ02" src="https://user-images.githubusercontent.com/52749338/84601766-95976380-aebd-11ea-9bb1-8125e164181d.png">
+アンケートのタイトル、質問、選択肢を入力し、アンケートを作成できます。選択肢は最大10個まで設定できます。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### マイページ
+<img width="700" alt="マイページ" src="https://user-images.githubusercontent.com/52749338/84601654-e195d880-aebc-11ea-8a6e-81c05cd393dd.png">
+マイページには自分が投稿したアンケートの一覧が新しい順に並んでいます。<br>
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 今後の展望
+- ユーザの回答を促すために回答したらポイントが得られるようにし、アンケートの作成にはそのポイントを利用する必要がある、というようなポイント制を導入したい
+- アンケートの検索機能導入
+- 円グラフの色をある程度ユーザが決められるようにする
