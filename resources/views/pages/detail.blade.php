@@ -74,7 +74,7 @@
         <form action="/delete" method="POST">
           @csrf
           <input type="hidden" value="{{ $targetQ->id }}" name="id">
-          <button type="submit" class="btn" style="background-color:#ff0000; margin-top:20px; color:white; width:100%; max-width:200px">この質問を削除する</button>
+          <button onClick="return confirm('削除します。\nよろしいですか？');" type="submit" class="btn" style="background-color:#ff0000; margin-top:20px; color:white; width:100%; max-width:200px">この質問を削除する</button>
         </form>
       </div>
       @endif
